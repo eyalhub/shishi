@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/shishi/static/css/main.b5d0c55a.chunk.css",
-    "main.js": "/shishi/static/js/main.48d4d81a.chunk.js",
-    "main.js.map": "/shishi/static/js/main.48d4d81a.chunk.js.map",
+    "main.js": "/shishi/static/js/main.27e81bb5.chunk.js",
+    "main.js.map": "/shishi/static/js/main.27e81bb5.chunk.js.map",
     "runtime-main.js": "/shishi/static/js/runtime-main.c2b49b79.js",
     "runtime-main.js.map": "/shishi/static/js/runtime-main.c2b49b79.js.map",
-    "static/js/2.40065b1d.chunk.js": "/shishi/static/js/2.40065b1d.chunk.js",
-    "static/js/2.40065b1d.chunk.js.map": "/shishi/static/js/2.40065b1d.chunk.js.map",
+    "static/js/2.9bffb4b1.chunk.js": "/shishi/static/js/2.9bffb4b1.chunk.js",
+    "static/js/2.9bffb4b1.chunk.js.map": "/shishi/static/js/2.9bffb4b1.chunk.js.map",
     "index.html": "/shishi/index.html",
     "static/css/main.b5d0c55a.chunk.css.map": "/shishi/static/css/main.b5d0c55a.chunk.css.map",
-    "static/js/2.40065b1d.chunk.js.LICENSE.txt": "/shishi/static/js/2.40065b1d.chunk.js.LICENSE.txt"
+    "static/js/2.9bffb4b1.chunk.js.LICENSE.txt": "/shishi/static/js/2.9bffb4b1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c2b49b79.js",
-    "static/js/2.40065b1d.chunk.js",
+    "static/js/2.9bffb4b1.chunk.js",
     "static/css/main.b5d0c55a.chunk.css",
-    "static/js/main.48d4d81a.chunk.js"
+    "static/js/main.27e81bb5.chunk.js"
   ]
 }
