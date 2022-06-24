@@ -1,28 +1,27 @@
 import Categories from "./categories";
 import AppBar from "./landingImage";
-import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
-
+import { HashRouter, Routes, Route } from "react-router-dom";
+import UploadImage from "./uploader";
 
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
-        <Route exact path="/" element={
+        <Route exact  path="/" element={
           <div>
             <div className="app">
             <AppBar />
             
             </div>
             <Categories />
-          </div>
-          
+          </div>   
+        } />
 
-        }>
-          
-        </Route>
+        <Route path="/upload" element={<UploadImage />} />
+            
       </Routes>
-    </Router>
+    </HashRouter>    
   );
 }
 

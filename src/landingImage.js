@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 
 const AppBar = () => {
+
     return (  
-        <Link to='/' style={{textDecoration : "none"}}>
+        <Link to="/">
             <div className="appBar">
                 <div className="wrapper">
                     <div className="logo">
@@ -13,6 +14,7 @@ const AppBar = () => {
                 </div>
             </div>
         </Link>
+            
     );
 }
  

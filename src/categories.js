@@ -1,30 +1,34 @@
 import CustomGrid from "./CustomGrid";
-
-
-const data = [
-    {"imageUrl": "/parases.jpeg", "title": "פרסים"}, 
-    {"imageUrl": "/horror.jpeg", "title": "אימה"},
-    {"imageUrl": "/idf.jpeg", "title": "צבא"},
-    {"imageUrl": "/white.jpeg", "title": "אשכנזים"},
-    {"imageUrl": "/trans.jpeg", "title": "טראנס"},
-    {"imageUrl": "/gays.jpeg", "title": "גייז"},
-    {"imageUrl": "/easywomen.jpeg", "title": "ציבורי"},
-    {"imageUrl": "/milf.jpeg", "title": "מילפיות"},
-    {"imageUrl": "/romans.jpeg", "title": "רומנים"},
-    {"imageUrl": "/orgy.jpeg", "title": "אורגיה"},
-    {"imageUrl": "/bbc.jpeg", "title": "bbc"},
-    {"imageUrl": "/volunteer.jpeg", "title": "מחויבות אישית"},
-    {"imageUrl": "/greeks.jpeg", "title": "ארץ זרה"},
-    {"imageUrl": "/rape.jpeg", "title": "אונס"},
-    {"imageUrl": "/ass.jpeg", "title": "תחת"},
-    {"imageUrl": "/eyal.jpg", "title": "שידול קטינות"},
-];
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Categories = () => {
+    const [data, setData] = useState(null);
+    const url = "https://raw.githubusercontent.com/eyalhub/shishi/main/public/data.json";
+    const backendUrl = "https://eyalback.herokuapp.com/static/data.json";
+    
+
+    useEffect(() => {
+        axios.get(url).then(res => {
+            setData(res.data);
+        });
+        console.log("nice")
+        let promise = new Promise( (resolve, reject) => {
+            axios.get(backendUrl).then(res => {
+                
+                resolve(res.data);
+            }).catch(e => {console.log("banana");reject(e);});  
+        });
+        promise.then(backendData => setData(backendData));
+    }, [])
+    
+
     return (  
-        <div className="categories">
+        data && <div className="categories">
             <div className="title">
                 <p>:קטגוריות</p>
+                <Link to={"/upload"}><p className="upload"><span>הוספת קטגוריה +</span></p></Link>
             </div>
             <CustomGrid data={data} url={"/categories"}/>
         </div>

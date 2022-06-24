@@ -1,3 +1,6 @@
+a {
+ text-decoration: none;
+}
 
 body{
   background: black;
@@ -67,9 +70,25 @@ body{
   object-fit: contain;
 }
 
+.image-preview {
+  
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 .categories{
   margin-top: 2.5vh;
   padding: 20px;
+}
+
+.categories .title{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .categories .title p {
@@ -91,6 +110,16 @@ body{
     /* phones */
     body{
       width: auto;
+    }
+
+    .upload span{
+      display: none;
+    }
+
+    .upload:after{
+      content: '+';
+      padding-right: 50px;
+      padding-left: 10px;
     }
 
     .custom-grid{
